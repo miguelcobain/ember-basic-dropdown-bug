@@ -1,0 +1,14 @@
+{{#basic-dropdown calculatePosition=(action "calculatePosition") as |dropdown|}}
+  {{#dropdown.trigger}}Click me{{/dropdown.trigger}}
+  {{#dropdown.content}}
+    <div onclick={{action "contentClicked"}}>
+      Content of the trigger
+    </div>
+  {{/dropdown.content}}
+{{/basic-dropdown}}
+
+<br>
+
+{{#if showInput}}
+  <input type="text" value="a" onfocus={{action "inputFocus"}}>
+{{/if}}
